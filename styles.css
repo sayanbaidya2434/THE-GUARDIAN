@@ -1,0 +1,130 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050508; /* Dark premium background */
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.container {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Logo & Tagline */
+.logo {
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.gold {
+    color: #C5A059;
+    border-bottom: 3px solid #C5A059;
+}
+
+.tagline {
+    margin-top: 15px;
+    color: #C5A059;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+/* Wave Decoration */
+.wave-container {
+    margin: 40px auto;
+    height: 2px;
+    width: 150px;
+    background: linear-gradient(90deg, transparent, #C5A059, transparent);
+}
+
+/* Download Button */
+.download-box {
+    margin: 40px 0;
+}
+
+.secure-tag {
+    color: #00ff88;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #C5A059;
+    color: #000;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn-subtext {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Content Cards */
+.content-section {
+    margin-top: 60px;
+    text-align: left;
+}
+
+.section-title {
+    color: #C5A059;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.feature-card, .privacy-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 3px solid #C5A059;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.feature-card p, .privacy-card p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    padding-bottom: 20px;
+}
+
+.dev-label {
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    color: #555;
+}
+
+.dev-name {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #C5A059;
+    margin-top: 5px;
+}
