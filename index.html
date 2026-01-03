@@ -4,8 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Guardian | Official Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Mobile-First Design exactly as your request */
+        body {
+            background: radial-gradient(circle, #0a0a1a 0%, #050505 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            letter-spacing: 8px;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .gold {
+            color: #C5A059;
+            border-bottom: 3px solid #C5A059;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .tagline {
+            color: #C5A059;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Abstract Wave Styling */
+        .wave-box {
+            margin: 50px auto;
+            position: relative;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wave-svg {
+            width: 250px;
+            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.3));
+        }
+
+        /* Download Button */
+        .download-container {
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #C5A059;
+            color: #000;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn-subtext {
+            display: block;
+            font-size: 0.65rem;
+            margin-top: 4px;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        /* Features Section */
+        .features {
+            text-align: left;
+            margin-top: 50px;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+            padding-top: 30px;
+        }
+
+        .feature-item {
+            margin-bottom: 25px;
+        }
+
+        .feature-item h3 {
+            color: #C5A059;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .feature-item p {
+            color: #999;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Developer Credit */
+        footer {
+            margin-top: 60px;
+        }
+
+        .dev-label {
+            font-size: 0.65rem;
+            letter-spacing: 5px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .dev-name {
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            color: #C5A059;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,34 +146,35 @@
             <p class="tagline">"YOUR SILENT SHIELD"</p>
         </header>
 
-        <div class="wave-container">
-            <div class="wave"></div>
+        <div class="wave-box">
+            <svg class="wave-svg" viewBox="0 0 200 40">
+                <path d="M0 20 Q50 0 100 20 T200 20" fill="none" stroke="#C5A059" stroke-width="2" opacity="0.5" />
+                <path d="M0 25 Q50 5 100 25 T200 25" fill="none" stroke="#6a3093" stroke-width="1" opacity="0.3" />
+            </svg>
         </div>
 
-        <div class="download-box">
-            <p class="secure-tag">🛡️ 100% Secure Direct Download</p>
-            <a href="https://drive.google.com/uc?export=download&id=1GumRGPs5652kHvJgljCLuGpimCmngf" class="download-btn">
+        <div class="download-container">
+            <p style="color:#00ff88; font-size:0.8rem; margin-bottom:15px;">🛡️ 100% Secure Direct Download</p>
+            <a href="https://drive.google.com/uc?export=download&id=1GumRGPs5w652kHvJgfIjCLuGpimCmngf" class="download-btn">
                 DOWNLOAD APK
                 <span class="btn-subtext">Free Version 1.0</span>
             </a>
         </div>
 
-        <section class="content-section">
-            <h2 class="section-title">Revolutionary Safety Features</h2>
-            
-            <div class="feature-card">
+        <section class="features">
+            <div class="feature-item">
                 <h3>Anti-Damage Protection</h3>
-                <p>In a dangerous situation, if someone tries to break or throw your phone, The Guardian instantly detects the impact and sends your last known location and an SOS alert to your emergency contacts.</p>
+                <p>If your phone is thrown or damaged in an emergency, The Guardian instantly sends your last known location and an SOS alert to your saved contacts.</p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-item">
                 <h3>Anti-Shutdown Security</h3>
-                <p>Attackers often try to switch off the phone first. Our app detects forced shutdowns and sends an immediate alert with real-time coordinates before the device turns off.</p>
+                <p>Detects forced shutdowns and shares your live coordinates with your trusted circle before the device can be turned off.</p>
             </div>
 
-            <div class="privacy-card">
-                <h3>Privacy First</h3>
-                <p>We believe in total privacy. **The Guardian does not collect, store, or share your personal data.** The app only requires essential permissions (Location, SMS, Accessibility) to function locally on your device during emergencies.</p>
+            <div class="feature-item">
+                <h3>Privacy Guaranteed</h3>
+                <p>Developed to protect, not to track. We collect zero personal data. All permissions are used locally to ensure your safety.</p>
             </div>
         </section>
 
