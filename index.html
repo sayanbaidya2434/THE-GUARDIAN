@@ -3,130 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Guardian | India's Fastest SOS system</title>
-    
+    <title>The Guardian | India's Fastest SOS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700;900&display=swap" rel="stylesheet">
-
     <style>
-        body { 
-            background: url('bg.png') no-repeat center center fixed; 
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap');
+        
+        body {
+            background: url('bg.png') no-repeat center center fixed;
             background-size: cover;
-            color: #1a1a1a; 
-            font-family: 'Space Grotesk', sans-serif; 
-            scroll-behavior: smooth; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #ffffff;
             overflow-x: hidden;
         }
 
-        /* Professional Glass Cards */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 1.5rem;
-            transition: all 0.4s ease;
+        /* Advanced Dark Overlay for Professional Contrast */
+        .scrim-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
         }
 
-        .glass-card:hover {
-            border: 1px solid #ef4444;
-            background: rgba(255, 255, 255, 0.2);
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
         }
 
-        /* Branding Text */
-        .main-title {
-            font-weight: 900;
-            letter-spacing: -0.05em;
-            text-transform: uppercase;
+        .text-glow { text-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+        
+        .nav-blur {
+            backdrop-filter: blur(15px);
+            background: rgba(0,0,0,0.7);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .btn-modern {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .btn-premium {
+            background: linear-gradient(90deg, #ef4444 0%, #991b1b 100%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .btn-modern:hover {
-            transform: translateY(-5px) scale(1.02);
-        }
+        .btn-premium:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(239, 68, 68, 0.4); }
+
+        /* Custom Reveal Animation */
+        [data-aos="reveal-left"] { transform: translateX(-100px); opacity: 0; transition-property: transform, opacity; }
+        [data-aos="reveal-left"].aos-animate { transform: translateX(0); opacity: 1; }
     </style>
 </head>
-<body>
+<body class="antialiased">
+    <div class="scrim-overlay"></div>
 
-    <nav class="p-8 text-center" data-aos="fade-down">
-        <h1 class="text-4xl md:text-5xl main-title text-gray-900">THE <span class="text-red-600">GUARDIAN</span></h1>
+    <nav class="fixed top-0 w-full z-50 nav-blur px-6 py-4 flex justify-between items-center">
+        <span class="text-2xl font-extrabold tracking-tighter uppercase">The <span class="text-red-600">Guardian</span></span>
+        <div class="hidden md:flex gap-8 text-sm font-bold tracking-widest text-gray-400">
+            <a href="#features" class="hover:text-white transition">FEATURES</a>
+            <a href="#privacy" class="hover:text-white transition">PRIVACY</a>
+            <a href="#connect" class="hover:text-white transition">CONNECT</a>
+        </div>
+        <a href="#connect" class="bg-red-600 px-5 py-2 rounded-full text-xs font-black tracking-widest">STAY UPDATED</a>
     </nav>
 
-    <header class="min-h-[70vh] flex flex-col justify-center items-center text-center px-6">
-        <h2 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter" data-aos="zoom-in">
-            INDIA'S <span class="text-red-600 underline decoration-8">FASTEST</span> SOS.
-        </h2>
-        <p class="text-xl md:text-2xl text-gray-800 max-w-3xl mb-12 font-medium" data-aos="fade-up" data-aos-delay="200">
-            A revolutionary safety ecosystem engineered to trigger emergency alerts in <strong>under 500ms.</strong>
-        </p>
-        
-        <div class="bg-black text-white px-12 py-4 rounded-full font-bold text-xl mb-10 tracking-widest animate-pulse" data-aos="flip-up">
-            LAUNCHING SOON
+    <header class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+        <div class="inline-block px-4 py-1 border border-red-500/30 rounded-full text-red-500 text-xs font-bold mb-6 tracking-widest" data-aos="fade-down">
+            V1.0 INTERNAL ENGINE
         </div>
-
-        <div class="flex flex-col items-center gap-2" data-aos="fade-in">
-            <p class="text-gray-500 uppercase tracking-widest text-xs font-black">Lead Developer</p>
-            <a href="https://instagram.com/ughsayan" target="_blank" class="text-2xl font-bold border-b-4 border-red-600 hover:text-red-600 transition">@ughsayan</a>
+        <h1 class="text-6xl md:text-9xl font-extrabold text-center leading-[0.9] tracking-tighter mb-8" data-aos="zoom-out" data-aos-duration="1500">
+            INDIA'S <br><span class="text-red-600 text-glow">FASTEST</span> SOS.
+        </h1>
+        <p class="max-w-xl text-center text-gray-400 text-lg md:text-xl font-medium mb-12" data-aos="fade-up" data-aos-delay="300">
+            Engineered to bridge the gap between danger and response. A zero-latency safety shield developed by <span class="text-white border-b-2 border-red-600">Sayan</span>.
+        </p>
+        <div class="flex flex-col md:flex-row gap-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="px-10 py-4 glass-panel border-white/20 font-black text-xl tracking-widest animate-pulse">
+                COMING SOON
+            </div>
         </div>
     </header>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card p-10" data-aos="fade-up">
-                <h3 class="text-2xl font-bold mb-4 text-red-600">Hardware Trigger</h3>
-                <p class="text-gray-700 leading-relaxed">System-level integration that detects 5x power button presses instantly, bypassing all software lag.</p>
+    <section id="features" class="py-32 px-6 max-w-7xl mx-auto">
+        <h2 class="text-xs font-black tracking-[0.5em] text-red-500 mb-16 text-center uppercase">System Capabilities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-panel p-12 relative overflow-hidden group" data-aos="reveal-left">
+                <div class="absolute -right-10 -top-10 text-9xl text-white/5 font-black group-hover:text-red-500/10 transition">01</div>
+                <h3 class="text-2xl font-extrabold mb-6">PANIC<br>TRIGGER</h3>
+                <p class="text-gray-400 leading-relaxed">Direct hardware-to-system alert. Press the Power Button 5 times to bypass UI lag and broadcast your location in < 500ms.</p>
             </div>
-            <div class="glass-card p-10" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-2xl font-bold mb-4 text-red-600">Anti-Shutdown</h3>
-                <p class="text-gray-700 leading-relaxed">Sophisticated detection of power-off attempts, firing a stealth SOS before the device is compromised.</p>
+            <div class="glass-panel p-12 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -right-10 -top-10 text-9xl text-white/5 font-black group-hover:text-red-500/10 transition">02</div>
+                <h3 class="text-2xl font-extrabold mb-6">ANTI<br>SHUTDOWN</h3>
+                <p class="text-gray-400 leading-relaxed">Most threats begin with turning off the device. Our engine detects shutdown attempts and fires a stealth alert before power is lost.</p>
             </div>
-            <div class="glass-card p-10" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-2xl font-bold mb-4 text-red-600">Zero-Latency Shake</h3>
-                <p class="text-gray-700 leading-relaxed">Advanced accelerometer processing to distinguish between normal activity and emergency struggles.</p>
+            <div class="glass-panel p-12 relative overflow-hidden group" data-aos="reveal-right">
+                <div class="absolute -right-10 -top-10 text-9xl text-white/5 font-black group-hover:text-red-500/10 transition">03</div>
+                <h3 class="text-2xl font-extrabold mb-6">SHAKE<br>RESPONSE</h3>
+                <p class="text-gray-400 leading-relaxed">Using advanced XYZ-axis accelerometer data to differentiate between a stumble and a struggle. Fast, reliable, and precise.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6">
-        <div class="max-w-4xl mx-auto glass-card p-12 text-center" data-aos="zoom-in">
-            <h2 class="text-4xl font-black mb-4">STAY CONNECTED</h2>
-            <p class="text-gray-600 mb-10 text-lg font-medium">Follow our journey for real-time updates and to help shape the future with your feedback.</p>
-            
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="https://instagram.com/theguardianapp_" target="_blank" class="btn-modern bg-red-600 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg shadow-red-500/30">
-                    Follow @theguardianapp_
+    <section id="connect" class="py-32 px-6">
+        <div class="max-w-5xl mx-auto glass-panel p-12 md:p-20 flex flex-col items-center text-center" data-aos="zoom-in-up">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">JOIN THE <span class="text-red-600">MOVEMENT.</span></h2>
+            <p class="text-gray-400 text-lg mb-12 max-w-2xl">We are currently in private beta. Follow the journey for early access and shape the future of safety with your feedback.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-lg">
+                <a href="https://instagram.com/theguardianapp_" target="_blank" class="btn-premium py-5 rounded-2xl font-black tracking-widest text-sm">
+                    @THEGUARDIANAPP_
                 </a>
-                <a href="https://instagram.com/ughsayan" target="_blank" class="btn-modern bg-white border-2 border-black text-black px-10 py-4 rounded-xl font-bold text-lg hover:bg-black hover:text-white">
-                    Developer's Profile
+                <a href="https://instagram.com/ughsayan" target="_blank" class="glass-panel border-white/20 py-5 rounded-2xl font-black tracking-widest text-sm hover:bg-white hover:text-black transition-all">
+                    DEVELOPER'S PROFILE
                 </a>
             </div>
-            <p class="mt-8 text-sm text-gray-500 italic">"Your feedback drives our mission. DM us for early access!"</p>
         </div>
     </section>
 
-    <section class="py-24 max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-widest">Architecture Transparency</h2>
-        <div class="space-y-6">
-            <div class="glass-card p-8 flex items-start gap-6" data-aos="fade-right">
-                <div class="bg-red-600 text-white px-4 py-2 rounded font-bold">CORE</div>
-                <p class="text-gray-700 font-medium text-lg">Accessibility Core: Watching for hardware button interrupts to ensure 24/7 reliability even when the app is closed.</p>
+    <section id="privacy" class="py-32 px-6 max-w-4xl mx-auto border-t border-white/10">
+        <div class="mb-20" data-aos="fade-right">
+            <h3 class="text-red-500 font-black tracking-widest text-sm mb-4 uppercase">Architecture Transparency</h3>
+            <p class="text-2xl md:text-3xl font-bold leading-snug">
+                The Guardian uses Android's <span class="text-white underline">Accessibility Service</span> to listen for physical button interrupts. This allows the app to protect you even when the screen is off or the phone is locked.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12" data-aos="fade-up">
+            <div>
+                <h4 class="font-black mb-4 tracking-widest text-xs uppercase text-gray-500">Data Sovereignty</h4>
+                <p class="text-gray-400 leading-relaxed">Zero Cloud. Zero Servers. Your emergency contacts and GPS logs are stored in an encrypted local sandbox. We cannot see your data, and we like it that way.</p>
             </div>
-            <div class="glass-card p-8 flex items-start gap-6" data-aos="fade-left">
-                <div class="bg-black text-white px-4 py-2 rounded font-bold">DATA</div>
-                <p class="text-gray-700 font-medium text-lg">Local Sandbox: No cloud servers. No tracking. Your SOS contacts and location history never leave your device.</p>
+            <div>
+                <h4 class="font-black mb-4 tracking-widest text-xs uppercase text-gray-500">Permission Protocol</h4>
+                <p class="text-gray-400 leading-relaxed">SMS and Location permissions are used strictly during a trigger event. No background tracking. No data harvesting. Just pure protection.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center border-t border-gray-200">
-        <p class="text-gray-400 font-bold mb-2">© 2026 THE GUARDIAN OFFICIAL</p>
-        <p class="text-xs tracking-[0.3em] font-black text-gray-900">ENGINEERED BY SAYAN</p>
+    <footer class="py-20 text-center border-t border-white/10 bg-black/40">
+        <div class="text-3xl font-black mb-4">THE <span class="text-red-600">GUARDIAN</span></div>
+        <p class="text-gray-500 text-xs tracking-[0.5em] font-bold">ENGINEERED BY SAYAN • INDIA</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init({ duration: 1000, once: true }); </script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+    </script>
 </body>
 </html>
