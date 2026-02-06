@@ -4,137 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Guardian | Protect Your World</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    </* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
-/* Custom Scrollbar for Chrome/Safari */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #050505;
-}
-::-webkit-scrollbar-thumb {
-    background: #ef4444;
-    border-radius: 10px;
-}
+    <style>
+        body { 
+            background-color: #050505; 
+            color: white; 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth; 
+            overflow-x: hidden;
+        }
 
-/* Glassmorphism Effect */
-.glass {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, border 0.3s ease;
-}
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #ef4444; border-radius: 10px; }
 
-.glass:hover {
-    transform: translateY(-5px);
-    border: 1px solid rgba(239, 68, 68, 0.3);
-}
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .glass:hover {
+            transform: translateY(-5px);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
 
-/* Animated Background Glow */
-.hero-gradient {
-    background: radial-gradient(circle at 50% 50%, #1a0b0b 0%, #050505 100%);
-}
+        /* Premium Glows */
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, #1a0b0b 0%, #050505 100%);
+        }
+        .coming-soon-badge {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            box-shadow: 0 0 20px rgba(255, 75, 43, 0.4);
+        }
 
-/* Red Glow for Buttons */
-.btn-glow {
-    transition: 0.4s;
-}
-
-.btn-glow:hover {
-    box-shadow: 0 0 25px rgba(239, 68, 68, 0.5);
-    transform: scale(1.05);
-}
-
-/* Coming Soon Animation */
-@keyframes pulse-red {
-    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-}
-
-.animate-pulse-custom {
-    animation: pulse-red 2s infinite;
-}
-
-/* Developer Name Styling */
-.dev-name {
-    background: linear-gradient(to right, #ffffff, #ef4444);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-}
->
-        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
-        .red-glow { box-shadow: 0 0 30px rgba(239, 68, 68, 0.2); }
-        .coming-soon-badge { background: linear-gradient(90deg, #ff416c, #ff4b2b); }
+        /* Animations */
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        .animate-glow { animation: pulse-red 2s infinite; }
     </style>
 </head>
-<body>
+<body class="hero-gradient">
 
-    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
         <div class="absolute w-64 h-64 bg-red-600/10 rounded-full blur-[120px] top-10 left-10"></div>
         
-        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter" data-aos="zoom-in">THE <span class="text-red-600">GUARDIAN</span></h1>
-        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-8" data-aos="fade-up">Fastest SOS Trigger System. Built for milliseconds. Designed for life.</p>
+        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter" data-aos="zoom-in">
+            THE <span class="text-red-600">GUARDIAN</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-10" data-aos="fade-up" data-aos-delay="100">
+            Fastest SOS Trigger System. Built for milliseconds. Designed for life.
+        </p>
         
-        <div class="coming-soon-badge px-8 py-3 rounded-full font-bold text-lg animate-pulse" data-aos="fade-up" data-aos-delay="300">
-            COMING SOON ON PLAY STORE
+        <div class="coming-soon-badge px-10 py-4 rounded-full font-bold text-lg animate-glow" data-aos="fade-up" data-aos-delay="300">
+            COMING SOON
         </div>
         
-        <div class="mt-12 text-gray-500 font-medium">Developed by: <span class="text-white">Sayan</span></div>
+        <div class="mt-16 text-gray-400 text-lg" data-aos="fade-in" data-aos-delay="500">
+            Developed by: <span class="text-white font-bold border-b-2 border-red-600 pb-1">Sayan</span>
+        </div>
     </header>
 
-    <section id="features" class="py-20 max-w-7xl mx-auto px-6">
+    <section id="features" class="py-24 max-w-7xl mx-auto px-6">
         <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Elite Protection Features</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="glass p-10 rounded-3xl" data-aos="fade-up">
                 <h3 class="text-2xl font-bold mb-4 text-red-500">Panic Trigger</h3>
-                <p class="text-gray-400 leading-relaxed">Press power button 5 times rapidly. Fires SOS even if the phone is in your pocket.</p>
+                <p class="text-gray-400 leading-relaxed text-lg">Press power button 5 times rapidly. Fires SOS even if the phone is in your pocket.</p>
             </div>
             <div class="glass p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-2xl font-bold mb-4 text-red-500">Anti-Shutdown</h3>
-                <p class="text-gray-400 leading-relaxed">Detects forced shutdown attempts and alerts your contacts before the phone goes off.</p>
+                <p class="text-gray-400 leading-relaxed text-lg">Detects forced shutdown attempts and alerts your contacts before the device goes off.</p>
             </div>
             <div class="glass p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
                 <h3 class="text-2xl font-bold mb-4 text-red-500">Smart Shake</h3>
-                <p class="text-gray-400 leading-relaxed">Adjustable shake sensitivity levels (Low, Medium, High) for zero false alarms.</p>
+                <p class="text-gray-400 leading-relaxed text-lg">Adjustable shake sensitivity levels (Low, Medium, High) for zero false alarms.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white/5">
+    <section class="py-24 bg-white/5">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-10 text-center text-red-500">Permissions Required</h2>
-            <div class="space-y-6 text-gray-300">
-                <p><strong>SMS Permission:</strong> Used only to send SOS alerts to your trusted contacts.</p>
-                <p><strong>Location Permission:</strong> Required to attach live GPS coordinates in your emergency message.</p>
-                <p><strong>Accessibility Service:</strong> Essential for detecting power menu actions and Anti-Shutdown triggers.</p>
+            <h2 class="text-3xl font-bold mb-12 text-center text-red-500">Transparency & Permissions</h2>
+            <div class="space-y-8 text-gray-300 text-lg">
+                <div class="flex gap-4">
+                    <span class="text-red-500 font-bold">01.</span>
+                    <p><strong>SMS Permission:</strong> Sending emergency alerts to your selected contacts instantly.</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-red-500 font-bold">02.</span>
+                    <p><strong>Location:</strong> Attaching high-precision GPS coordinates to your SOS message.</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-red-500 font-bold">03.</span>
+                    <p><strong>Accessibility:</strong> Monitoring hardware triggers to ensure safety even when the app is closed.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 max-w-4xl mx-auto px-6 border-t border-white/10">
-        <h2 class="text-3xl font-bold mb-8">Privacy Policy</h2>
-        <div class="text-gray-400 leading-relaxed text-sm space-y-4">
-            <p>1. <strong>Data Collection:</strong> The Guardian does NOT collect, store, or share any personal data to external servers. All information remains on your device.</p>
-            <p>2. <strong>Contact Security:</strong> Your emergency contacts are stored locally and are only used for SMS triggers.</p>
-            <p>3. <strong>Zero Tracking:</strong> We do not track your movement. Location is only accessed at the exact moment of an emergency trigger.</p>
+    <section class="py-24 max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-10">Privacy Policy</h2>
+        <div class="glass p-8 rounded-2xl text-gray-400 leading-relaxed space-y-4">
+            <p>• <strong>Offline Logic:</strong> All triggers and data processing happen on your device. We have no servers to store your data.</p>
+            <p>• <strong>No Tracking:</strong> Your location is only accessed when you trigger an emergency. We do not track you in the background.</p>
+            <p>• <strong>Local Storage:</strong> Your emergency contacts are encrypted and stored only on your phone.</p>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-600 text-sm">
-        © 2026 The Guardian App | Built by Sayan
+    <footer class="py-12 text-center text-gray-600 border-t border-white/5">
+        <p class="mb-2">© 2026 The Guardian App | All Rights Reserved</p>
+        <p>Architected by <span class="text-gray-400">Sayan</span></p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init({ duration: 1000 }); </script>
+    <script> AOS.init({ duration: 1000, once: true }); </script>
 </body>
 </html>
