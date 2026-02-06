@@ -11,11 +11,29 @@
 
     <style>
         body { 
-            background-color: #050505; 
+            /* 1. Image hamesha fixed rahegi aur scroll nahi hogi */
+            background-image: url('bg.png'); 
+            background-attachment: fixed; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #050505; /* Backup color */
+            
             color: white; 
             font-family: 'Inter', sans-serif; 
             scroll-behavior: smooth; 
             overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* 2. Dark Overlay Layer taaki text readable rahe */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* 70% darkness layer */
+            z-index: -1;
         }
 
         /* Custom Scrollbar */
@@ -37,10 +55,6 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        /* Premium Glows */
-        .hero-gradient {
-            background: radial-gradient(circle at 50% 50%, #1a0b0b 0%, #050505 100%);
-        }
         .coming-soon-badge {
             background: linear-gradient(90deg, #ff416c, #ff4b2b);
             box-shadow: 0 0 20px rgba(255, 75, 43, 0.4);
@@ -55,11 +69,9 @@
         .animate-glow { animation: pulse-red 2s infinite; }
     </style>
 </head>
-<body class="hero-gradient">
+<body>
 
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
-        <div class="absolute w-64 h-64 bg-red-600/10 rounded-full blur-[120px] top-10 left-10"></div>
-        
         <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter" data-aos="zoom-in">
             THE <span class="text-red-600">GUARDIAN</span>
         </h1>
@@ -94,20 +106,20 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white/5">
+    <section class="py-24 bg-black/40 backdrop-blur-sm">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center text-red-500">Transparency & Permissions</h2>
             <div class="space-y-8 text-gray-300 text-lg">
                 <div class="flex gap-4">
-                    <span class="text-red-500 font-bold">01.</span>
+                    <span class="text-red-500 font-bold text-xl">01.</span>
                     <p><strong>SMS Permission:</strong> Sending emergency alerts to your selected contacts instantly.</p>
                 </div>
                 <div class="flex gap-4">
-                    <span class="text-red-500 font-bold">02.</span>
+                    <span class="text-red-500 font-bold text-xl">02.</span>
                     <p><strong>Location:</strong> Attaching high-precision GPS coordinates to your SOS message.</p>
                 </div>
                 <div class="flex gap-4">
-                    <span class="text-red-500 font-bold">03.</span>
+                    <span class="text-red-500 font-bold text-xl">03.</span>
                     <p><strong>Accessibility:</strong> Monitoring hardware triggers to ensure safety even when the app is closed.</p>
                 </div>
             </div>
@@ -123,9 +135,9 @@
         </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-600 border-t border-white/5">
+    <footer class="py-12 text-center text-gray-500 border-t border-white/5 bg-black/60">
         <p class="mb-2">© 2026 The Guardian App | All Rights Reserved</p>
-        <p>Architected by <span class="text-gray-400">Sayan</span></p>
+        <p>Architected by <span class="text-gray-400 font-bold underline decoration-red-600">Sayan</span></p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
