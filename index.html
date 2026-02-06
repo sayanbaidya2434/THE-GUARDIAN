@@ -3,196 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Guardian | Official Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>The Guardian | Protect Your World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bg.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-family: 'Orbitron', sans-serif;
-            color: #FFD700;
-            font-size: 4rem;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            color: #FFD700;
-            margin-bottom: 40px;
-            letter-spacing: 3px;
-        }
-
-        .download-btn {
-            padding: 20px 50px;
-            background: #FFD700;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            text-transform: uppercase;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
-            transition: 0.3s;
-        }
-
-        /* --- Container & Sections --- */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        .section-title {
-            color: #FFD700;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            text-align: center;
-            text-transform: uppercase;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-            padding-bottom: 15px;
-        }
-
-        .feature-box {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 40px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(255, 215, 0, 0.1);
-        }
-
-        .feature-box h3 {
-            color: #FFD700;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        /* --- Permissions Style --- */
-        .permission-box {
-            border-left: 4px solid #FFD700;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 25px;
-            margin-bottom: 25px;
-        }
-
-        .permission-box h4 {
-            color: #FFD700;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .trust-factor {
-            color: #90EE90; /* Light Green for Trust */
-            font-size: 0.9rem;
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        /* --- Privacy Statement --- */
-        .privacy-hook {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(255, 215, 0, 0.05);
-            border-radius: 20px;
-            margin-top: 50px;
-        }
-
-        .privacy-hook h2 {
-            color: #FFD700;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 50px;
-            background: #000;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        b { color: #FFD700; }
+        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        .red-glow { box-shadow: 0 0 30px rgba(239, 68, 68, 0.2); }
+        .coming-soon-badge { background: linear-gradient(90deg, #ff416c, #ff4b2b); }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h1>THE GUARDIAN</h1>
-        <p>Your Silent Shield</p>
-        <a href="#" class="download-btn">Download Official APK</a>
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute w-64 h-64 bg-red-600/10 rounded-full blur-[120px] top-10 left-10"></div>
+        
+        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter" data-aos="zoom-in">THE <span class="text-red-600">GUARDIAN</span></h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-8" data-aos="fade-up">Fastest SOS Trigger System. Built for milliseconds. Designed for life.</p>
+        
+        <div class="coming-soon-badge px-8 py-3 rounded-full font-bold text-lg animate-pulse" data-aos="fade-up" data-aos-delay="300">
+            COMING SOON ON PLAY STORE
+        </div>
+        
+        <div class="mt-12 text-gray-500 font-medium">Developed by: <span class="text-white">Sayan</span></div>
+    </header>
+
+    <section id="features" class="py-20 max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Elite Protection Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="glass p-10 rounded-3xl" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-4 text-red-500">Panic Trigger</h3>
+                <p class="text-gray-400 leading-relaxed">Press power button 5 times rapidly. Fires SOS even if the phone is in your pocket.</p>
+            </div>
+            <div class="glass p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-bold mb-4 text-red-500">Anti-Shutdown</h3>
+                <p class="text-gray-400 leading-relaxed">Detects forced shutdown attempts and alerts your contacts before the phone goes off.</p>
+            </div>
+            <div class="glass p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-2xl font-bold mb-4 text-red-500">Smart Shake</h3>
+                <p class="text-gray-400 leading-relaxed">Adjustable shake sensitivity levels (Low, Medium, High) for zero false alarms.</p>
+            </div>
+        </div>
     </section>
 
-    <div class="container">
-        
-        <h2 class="section-title">Core Technologies</h2>
-        
-        <div class="feature-box">
-            <h3>SHAKE-ALERT TECHNOLOGY (PROXIMITY DEFENSE)</h3>
-            <p>"The Guardian utilizes advanced accelerometer-based algorithms to detect high-velocity displacement of your device. In the event of a sudden snatching or forceful movement, the system instantly triggers an emergency protocol, sending your real-time GPS coordinates to your designated emergency contacts without requiring manual intervention."</p>
+    <section class="py-20 bg-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center text-red-500">Permissions Required</h2>
+            <div class="space-y-6 text-gray-300">
+                <p><strong>SMS Permission:</strong> Used only to send SOS alerts to your trusted contacts.</p>
+                <p><strong>Location Permission:</strong> Required to attach live GPS coordinates in your emergency message.</p>
+                <p><strong>Accessibility Service:</strong> Essential for detecting power menu actions and Anti-Shutdown triggers.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="feature-box">
-            <h3>STEALTH MODE & FAKE SHUTDOWN SYSTEM</h3>
-            <p>"To prevent unauthorized device deactivation, The Guardian features an industry-first 'Fake Shutdown' mechanism. If an intruder attempts to power off the device, the app simulates a complete system shutdown with a black screen, effectively misleading the intruder while keeping all tracking services and GPS modules active in the background."</p>
+    <section class="py-20 max-w-4xl mx-auto px-6 border-t border-white/10">
+        <h2 class="text-3xl font-bold mb-8">Privacy Policy</h2>
+        <div class="text-gray-400 leading-relaxed text-sm space-y-4">
+            <p>1. <strong>Data Collection:</strong> The Guardian does NOT collect, store, or share any personal data to external servers. All information remains on your device.</p>
+            <p>2. <strong>Contact Security:</strong> Your emergency contacts are stored locally and are only used for SMS triggers.</p>
+            <p>3. <strong>Zero Tracking:</strong> We do not track your movement. Location is only accessed at the exact moment of an emergency trigger.</p>
         </div>
+    </section>
 
-        <div class="feature-box">
-            <h3>DIRECT P2P ENCRYPTED ALERTS</h3>
-            <p>"Safety is decentralized. Our system bypasses third-party servers to ensure that your location data is sent directly from your device to your trusted contacts via encrypted SMS. This ensures zero latency and maximum privacy for your sensitive information."</p>
-        </div>
-
-        <h2 class="section-title">Permissions & Transparency</h2>
-        
-        <div class="permission-box">
-            <h4>SMS PERMISSION (EMERGENCY DISPATCH)</h4>
-            <p><b>Purpose:</b> To autonomously send SOS messages when a threat is detected.</p>
-            <p class="trust-factor"><b>Trust Factor:</b> The app only accesses SMS functions during a triggered alert. We do not read personal conversations or store your messaging history.</p>
-        </div>
-
-        <div class="permission-box">
-            <h4>LOCATION PERMISSION (REAL-TIME TRACKING)</h4>
-            <p><b>Purpose:</b> To provide high-precision Google Maps coordinates to your emergency contacts.</p>
-            <p class="trust-factor"><b>Trust Factor:</b> Location is accessed only when the 'Shake Alert' or 'Fake Shutdown' is active. Your data is never uploaded to any cloud server.</p>
-        </div>
-
-        <div class="permission-box">
-            <h4>ACCESSIBILITY SERVICE (DEVICE PROTECTION)</h4>
-            <p><b>Purpose:</b> This is the core of our 'Fake Shutdown' feature. It allows the app to intercept the power-button menu to prevent unauthorized access.</p>
-            <p class="trust-factor"><b>Trust Factor:</b> This permission is used strictly for UI interaction and system-layer protection. We do not monitor your screen activity or capture any keystroke.</p>
-        </div>
-
-        <div class="privacy-hook">
-            <h2>"Your Data. Your Safety. Our Priority."</h2>
-            <p>"The Guardian is built on the principle of 'Privacy by Design.' We do not maintain any external databases. Every piece of information, from your contact numbers to your location history, remains strictly on your device. We collect <b>0% of your personal data</b>, ensuring that your silent shield remains truly private."</p>
-        </div>
-
-    </div>
-
-    <footer>
-        Developed by <b>Sayan Baidya</b><br>
-        Follow us on Instagram: <b>@theguardianapp_</b><br><br>
-        &copy; 2026 THE GUARDIAN PROJECT. All Rights Reserved.
+    <footer class="py-10 text-center text-gray-600 text-sm">
+        © 2026 The Guardian App | Built by Sayan
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init({ duration: 1000 }); </script>
 </body>
 </html>
